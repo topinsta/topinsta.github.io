@@ -18,11 +18,32 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<!-- CAPTCHA -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<!-- // CAPTCHA -->
+
+	<!-- IP -->
+	<script type="text/javascript">
+		var IPCLIENT = null;
+	</script>
+	<script type="text/javascript" src="https://l2.io/ip.js?var=IPCLIENT"></script>
+
 </head>
 <body>
-	
-	<nav class="navbar">    
+
+	<nav class="navbar">
   	<a class="navbar-brand" href="#"><em class="logo"></em><h1>TopInsta</h1></a>
+  	<div class="nav-right">
+  		<a href="#/contato" title="Contato" class="lnk">Contato</a>
+  		<a href="#/quero-aparecer" title="Quero aparecer aqui!" class="btn">QUERO APARECER AQUI!</a>
+  		<a href="javascript:;" class="donate">
+  			<i class="icon icon-donate"></i>
+  			<span>DONATE</span>
+  			<div>
+  				Ajude a manter esse site, doe <strong>qualquer valor!</strong>
+  			</div>
+  		</a>
+  	</div>
   </nav>
 
 	<div class="container">
@@ -32,6 +53,79 @@
 		<ul class="list"></ul>
 		<div class="loader"></div>
 	</div>
+
+	<div id="overlayer"></div>
+	<div class="modal" id="modal-contact">
+		<header>
+			<h1>Contato</h1>
+			<a href="#/" title="Fechar"></a>
+		</header>
+		<div class="body">
+			<form action="javascript:;" name="form-contact" id="form-contact">
+				<label>
+					<span>Nome:</span>
+					<input name="name" type="text">
+				</label>
+				<label>
+					<span>E-mail:</span>
+					<input name="email" type="text">
+				</label>
+				<label>
+					<span>Mensagem:</span>
+					<textarea name="message" rows="5" draggable="false"></textarea>
+				</label>
+				<div class="captcha">
+					<div class="g-recaptcha" data-sitekey="6LeuegwTAAAAAKPsNQmK8lkrSVTe4ReZRYUcE8cD"></div>
+				</div>
+				<div class="btns">
+					<button type="submit">Enviar</button>
+				</div>
+			</form>
+			<div class="form-success">
+				<h2>Seus dados foram enviados com sucesso!</h2>
+				<p>Obrigado pelo contato!</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-see-me">
+		<header>
+			<h1>Quero aparecer aqui!</h1>
+			<a href="#/" class="close" title="Fechar"></a>
+		</header>
+		<div class="body">
+			<form action="javascript:;" name="form-seeme" id="form-seeme">
+				<label>
+					<span>Nome:</span>
+					<input name="name" type="text">
+				</label>
+				<label>
+					<span>E-mail:</span>
+					<input name="email" type="text">
+				</label>
+				<label>
+					<span>Instagram:</span>
+					<input name="instagram" placeholder="Ex: juju_top" type="text">
+				</label>
+				<div class="captcha">
+					<div class="g-recaptcha" data-sitekey="6LeuegwTAAAAAKPsNQmK8lkrSVTe4ReZRYUcE8cD"></div>
+				</div>
+				<div class="btns">
+					<button type="submit">Enviar</button>
+				</div>
+			</form>
+			<div class="form-success">
+				<h2>Seus dados foram enviados com sucesso!</h2>
+				<p>Obrigado pelo contato!</p>
+			</div>
+		</div>
+	</div>
+
+<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+	<form id="form-donate" action="https://pagseguro.uol.com.br/checkout/v2/donation.html" target="_blank" method="post">
+		<input type="hidden" name="currency" value="BRL" />
+		<input type="hidden" name="receiverEmail" value="topsinstacontato@outlook.com" />
+	</form>
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
 
 	<script id="template" type="text/x-jsrender">
 		<li class="list-item">
@@ -52,9 +146,10 @@
 			{{/if}}
 		</li>
 	</script>
-	
+
 	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>');</script>
   <script src="js/main.min.js"></script>
 
   <!-- Google Analytics -->
@@ -63,7 +158,7 @@
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
+
 		ga('create', 'UA-66531402-1', 'auto');
 		ga('send', 'pageview');
 	</script>
