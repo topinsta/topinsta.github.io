@@ -28,13 +28,13 @@
 	<nav class="navbar">
   	<a class="navbar-brand" href="#"><em class="logo"></em><h1>TopsInsta</h1></a>
   	<div class="nav-right">
-  		<a href="#/contato" title="Contato" class="lnk">Contato</a>
-  		<a href="#/quero-aparecer" title="Quero aparecer aqui!" class="btn">QUERO APARECER AQUI!</a>
+  		<a href="#/contato" title="Contact" class="lnk">Contact</a>
+  		<a href="#/quero-aparecer" title="Put me here!" class="btn">PUT ME HERE!</a>
   		<a href="javascript:;" class="donate">
   			<i class="icon icon-donate"></i>
   			<span>DONATE</span>
   			<div>
-  				Ajude a manter esse site, doe <strong>qualquer valor!</strong>
+  				help me to keep this website, <strong>donate any amount!</strong>
   			</div>
   		</a>
   	</div>
@@ -48,13 +48,13 @@
 	<div id="overlayer"></div>
 	<div class="modal" id="modal-contact">
 		<header>
-			<h1>Contato</h1>
+			<h1>Contact</h1>
 			<a href="#/" title="Fechar"></a>
 		</header>
 		<div class="body">
 			<form action="javascript:;" name="form-contact" id="form-contact">
 				<label>
-					<span>Nome:</span>
+					<span>Name:</span>
 					<input name="name" type="text">
 				</label>
 				<label>
@@ -62,29 +62,29 @@
 					<input name="email" type="text">
 				</label>
 				<label>
-					<span>Mensagem:</span>
+					<span>Message:</span>
 					<textarea name="message" rows="5" draggable="false"></textarea>
 				</label>
 				<div class="captcha"></div>
 				<div class="btns">
-					<button type="submit">Enviar</button>
+					<button type="submit">Send</button>
 				</div>
 			</form>
 			<div class="form-success">
-				<h2>Seus dados foram enviados com sucesso!</h2>
-				<p>Obrigado pelo contato!</p>
+				<h2>Your message was sent successfully!</h2>
+				<p>Thank you!</p>
 			</div>
 		</div>
 	</div>
 	<div class="modal" id="modal-see-me">
 		<header>
-			<h1>Quero aparecer aqui!</h1>
+			<h1>Put me here!</h1>
 			<a href="#/" class="close" title="Fechar"></a>
 		</header>
 		<div class="body">
 			<form action="javascript:;" name="form-seeme" id="form-seeme">
 				<label>
-					<span>Nome:</span>
+					<span>Name:</span>
 					<input name="name" type="text">
 				</label>
 				<label>
@@ -97,12 +97,12 @@
 				</label>
 				<div class="captcha"></div>
 				<div class="btns">
-					<button type="submit">Enviar</button>
+					<button type="submit">Send</button>
 				</div>
 			</form>
 			<div class="form-success">
-				<h2>Seus dados foram enviados com sucesso!</h2>
-				<p>Obrigado pelo contato!</p>
+				<h2>Your message was sent successfully!</h2>
+				<p>Thank you!</p>
 			</div>
 		</div>
 	</div>
@@ -126,7 +126,7 @@
 		    </div>
 			{{else}}
 		  	<div class="content type-video">
-		    	<video controls loop poster="{{:poster}}" id="{{:id}}">
+		    	<video controls loop poster="{{:poster}}" id="{{:id}}" data-user="{{:username}}">
 					  <source src="{{:video}}" type="video/mp4">
 					</video>
 		    </div>
@@ -134,12 +134,7 @@
 		</li>
 	</script>
 
-	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script type="text/javascript">window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>');</script>
-  <script src="js/main.min.js"></script>
-
-  <!-- Google Analytics -->
+	<!-- Google Analytics -->
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -150,5 +145,10 @@
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
+
+	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>');</script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>
